@@ -21,12 +21,12 @@ test("type inference", () => {
 
   util.assertEqual<
     recordWithEnumKeys,
-    Record<"Tuna" | "Salmon", string>
+    Partial<Record<"Tuna" | "Salmon", string>>
   >(true);
 
   util.assertEqual<
     recordWithLiteralKeys,
-    Record<"Tuna" | "Salmon", string>
+    Partial<Record<"Tuna" | "Salmon", string>>
   >(true);
 });
 
